@@ -1,2 +1,2 @@
 # jenkins-git
-jenkins-git integration file.
+jenkins-git integration file
