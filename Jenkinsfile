@@ -1,14 +1,17 @@
 pipeline {
     agent any
     stages {
-        stage('Deloy') {
+        stage('Build') {
             steps {
-                timeout(time:1, unit:'MINUTES') {
-                    sh '/var/lib/jenkins/scripts/fibonacci.sh 5'
-                }
-                timeout(time:1, unit:'MINUTES') {
-                    sh '/var/lib/jenkins/scripts/fibonacci.sh 32'
-                }
+                sh 'echo "hello World"'
+            }
+        }
+        stage('BuildMore') {
+            steps {
+                sh '''
+                  echo "multiline step"
+                  ls -lah
+                  '''
             }
         }
     }
